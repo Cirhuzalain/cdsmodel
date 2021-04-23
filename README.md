@@ -1,4 +1,4 @@
-# Transformer Model for Cross-Lingual Document Summarization
+# CDS : Cross-Lingual Document Summarization
 
 ## Activate virtual environment
 1. Use `conda create -n cdsmodel python=3.7` to create a new environment
