@@ -1,0 +1,7 @@
+rouge-score
+numpy
+tensorboard
+torch 
+torchvision 
+torchaudio
+editdistance

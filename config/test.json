@@ -1,0 +1,19 @@
+{
+    "vocab": [
+        "dummydata/vocab/source_final.vocab",
+        "dummydata/vocab/target_final.vocab"
+    ],
+    "model_path": "checkpoint-step-210000",
+    "input": "dummydata/data/test.source",
+    "truth": "dummydata/data/test.target",
+    "vocab_source_model": "dummydata/vocab/source.model",
+    "vocab_target_model": "dummydata/vocab/target.model",
+    "output": "dummydata/test_output.txt",
+    "length_penalty": 0.6,
+    "trigram_restriction": 3,
+    "min_length": 25,
+    "max_length": 60,
+    "beam_size": 5,
+    "batch_size": 16,
+    "tf": false
+}

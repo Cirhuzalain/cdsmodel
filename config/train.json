@@ -1,0 +1,27 @@
+{
+    "train": [
+        "dummydata/data/train.source",
+        "dummydata/data/train.target"
+    ],
+    "valid": [
+        "dummydata/data/valid.source",
+        "dummydata/data/valid.target"
+    ],
+    "vocab": [
+        "dummydata/vocab/source_final.vocab",
+        "dummydata/vocab/target_final.vocab"
+    ],
+    "model_path": "",
+    "vocab_source_model": "dummydata/vocab/source.model",
+    "vocab_target_model": "dummydata/vocab/target.model",
+    "layers": 6,
+    "heads": 8,
+    "hidden_size": 512,
+    "ff_size": 2048,
+    "batch_size": 32,
+    "warm_up": 16000,
+    "report_every": 100,
+    "save_every": 3000,
+    "max_to_keep": 50,
+    "tf": true
+}
