@@ -1,4 +1,4 @@
-# CDS : Cross-Lingual Document Summarization
+# CDS : Cross-Lingual Document Summarization (WIP)
 
 ## Activate virtual environment
 1. Use `conda create -n cdsmodel python=3.7` to create a new environment
@@ -11,7 +11,7 @@ After cloning the project use `cd cdsmodel`
 ## Install Dependencies on a CUDA enable device
 Use `pip install -r requirements.txt` command
 
-## Training & Evaluation
+## Training & Evaluation on Dummy Data
 1. Use `python train.py -config config/train.json` command for training
 2. Use `python train.py -config config/test.json` command for evaluation
 
