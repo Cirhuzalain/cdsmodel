@@ -16,7 +16,9 @@ class HypothesisTail(object):
         self.tokenid = tokenid
 
 class Beam(object):
-
+    """
+        Beam Search Implementation for AMMI NLP 2 course
+    """
     def __init__(self, beam_size, 
                     padding_token=0, 
                     bos_token=1, 

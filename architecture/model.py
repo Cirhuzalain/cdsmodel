@@ -24,7 +24,9 @@ class Generator(nn.Module):
         return lsm_score
 
 class CDS(nn.Module):
-    
+    """
+        Transformer implementation following  (Zhu et al. : https://arxiv.org/abs/1909.00156)
+    """
     def __init__(self, encoder: Encoder, decoder: Decoder, generator: Generator):
         super(CDS, self).__init__()
 
