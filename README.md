@@ -12,12 +12,12 @@ After cloning the project use `cd cdsmodel`
 Use `pip install -r requirements.txt` command
 
 ## Training & Evaluation
-Use `python train.py -config config/train.json` command
-Use `python train.py -config config/test.json` command
+1. Use `python train.py -config config/train.json` command for training
+2. Use `python train.py -config config/test.json` command for evaluation
 
 ## Built with
 * Python
 * Numpy
-* Pytorch
+* PyTorch
 * Rouge Score
 * Tensorboard
