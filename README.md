@@ -15,6 +15,10 @@ Use `pip install -r requirements.txt` command
 1. Use `python train.py -config config/train.json` command for training
 2. Use `python train.py -config config/test.json` command for evaluation
 
+## Resources
+* AMMI NLP 2 Course
+* NCLS : (https://arxiv.org/abs/1909.00156)
+
 ## Built with
 * Python
 * Numpy
