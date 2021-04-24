@@ -17,6 +17,8 @@ Use `pip install -r requirements.txt` command
 
 ## Resources
 * AMMI NLP 2 Course
+* Hugging Face Transformer
+* Optuna (https://optuna.org/)
 * NCLS : (https://arxiv.org/abs/1909.00156)
 
 ## Built with
