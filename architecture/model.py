@@ -8,8 +8,8 @@ from architecture.transformer import Embedding, Encoder, Decoder
 class Generator(nn.Module):
 
     def __init__(self, hidden_size, tgt_vocab_size):
-        self.vocab_size = tgt_vocab_size
         super(Generator, self).__init__()
+        self.vocab_size = tgt_vocab_size
         self.linear_hidden = nn.Linear(hidden_size, tgt_vocab_size)
         self.lsm = nn.LogSoftmax(dim=-1)
 

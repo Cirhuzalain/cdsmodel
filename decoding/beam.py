@@ -17,7 +17,7 @@ class HypothesisTail(object):
 
 class Beam(object):
     """
-        Beam Search Implementation for AMMI NLP 2 course
+        Beam Search Implementation during AMMI NLP 2 course
     """
     def __init__(self, beam_size, 
                     padding_token=0, 
