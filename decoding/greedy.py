@@ -1,6 +1,9 @@
 import torch 
 
 def greedy_search(model, opt, src, fields, max_len=100):
+    """
+        Greedy Search Implementation during AMMI NLP 2 course
+    """
     model.eval()
     batch_size = src.size(0)
     beam_size = opt.beam_size

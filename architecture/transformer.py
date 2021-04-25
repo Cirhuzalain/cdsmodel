@@ -17,11 +17,11 @@ class Embedding(nn.Module):
 
 
     def __init__(self, embedding_dim, vocab_size, padding_idx, dropout):
+        super(Embedding, self).__init__()
         self.word_padding_idx = padding_idx
         self.embedding_dim = embedding_dim
         pe = positional_encoding(embedding_dim)
-        super(Embedding, self).__init__()
-
+        
         self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=padding_idx)
         self.register_buffer('pe', pe)
         self.dropout = nn.Dropout(p=dropout)
@@ -65,10 +65,10 @@ class FeedForward(nn.Module):
 class MultiHeadedAttention(nn.Module):
 
     def __init__(self, head_count, model_dim, dropout):
+        super(MultiHeadedAttention, self).__init__()
         self.dim_per_head = model_dim // head_count
         self.head_count = head_count
 
-        super(MultiHeadedAttention, self).__init__()
         self.linear_q = nn.Linear(model_dim, model_dim, bias=False)
         self.linear_k = nn.Linear(model_dim, model_dim, bias=False)
         self.linear_v = nn.Linear(model_dim, model_dim, bias=False)
@@ -131,8 +131,8 @@ class EncoderLayer(nn.Module):
 class Encoder(nn.Module):
 
     def __init__(self, num_layers, num_heads, hidden_size, dropout, ff_size, embedding):
-        self.num_layers = num_layers
         super(Encoder, self).__init__()
+        self.num_layers = num_layers
         self.embedding = embedding
         self.layers = nn.ModuleList([EncoderLayer(hidden_size, dropout, num_heads, ff_size) for _ in range(num_layers)])
         self.norm = nn.LayerNorm(hidden_size)
@@ -172,9 +172,9 @@ class DecoderLayer(nn.Module):
 class Decoder(nn.Module):
     
     def __init__(self, num_layers, num_heads, hidden_size, dropout, ff_size, embedding):
-        self.num_layers = num_layers
-
         super(Decoder, self).__init__()
+        self.num_layers = num_layers
+       
         self.embedding = embedding
         self.layers = nn.ModuleList([DecoderLayer(hidden_size, dropout, num_heads, ff_size) for _ in range(num_layers)])
         self.register_buffer("upper_triangle", torch.triu(torch.ones(1000, 1000), diagonal=1).byte())
